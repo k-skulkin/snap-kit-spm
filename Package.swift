@@ -11,8 +11,14 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "SnapSDK",
-            targets: ["SCSDKCoreKit", "SCSDKLoginKit", "SCSDKCreativeKit"])
+			name: "SnapSDK",
+			targets: ["SCSDKCoreKit", "SCSDKLoginKit", "SCSDKCreativeKit"]),
+		.library(
+			name: "SCSDKCoreKit",
+			targets: ["SCSDKCoreKit"]),
+		.library(
+			name: "SCSDKCreativeKit",
+			targets: ["SCSDKCreativeKit"])
     ],
     targets: [
         .binaryTarget(
